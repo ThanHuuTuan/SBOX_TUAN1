@@ -3,10 +3,20 @@
 
 int main()
 {
-    char str[1000];
-    int i, length;
-    printf("Nhap vao chuoi: ");
-    gets(str);
+    int n,i;
+    int length;
+    printf("\nNhap vao do dai mong muon n= ");
+    scanf("%d",&n);
+    char str[n];
+    do{
+        printf("\nNhap vao chuoi: ");
+        fflush(stdin);
+        gets(str);
+        if(strlen(str)>n){
+            printf("\nNhap lai chuoi thoa man dieu kien!",n);
+        }
+    }
+    while(strlen(str)>n);
     length = strlen(str);
     printf("Chuoi Dao: ");
     for(i=length-1; i>=0; i--)
