@@ -4,9 +4,9 @@ int main() {
 
     int n, a, b, c, temp;
 
-    printf("Nhap so nguyen n co 3 chu so): ");
+    printf("Nhap so nguyen n co 3 chu so: ");
     scanf("%d", &n);
-if(a>=100 && a<=999){
+do{
 
     a = n/100;
     b = ((n%100)/10);
@@ -29,15 +29,12 @@ if(a>=100 && a<=999){
             temp=a; a=b; b=temp;
 
                 }
-
-    printf("So can chuyen : %d%d%d", a, b, c);
+    printf("So ban dau = %d \n",n);
+    printf("So moi = %d%d%d", a, b, c);
     getch();
 
   }
-else
-  {
-      printf("Nhap so nguyen trong khoang 100-999");
-  }
+while(n>=100 && n<=999);
 
 
 }
