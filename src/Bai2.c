@@ -2,27 +2,29 @@
 
 int main()
 {
-    char str[100];
-    int chuthuong,chuhoa;
-    int i;
-
-    chuthuong=chuhoa=0;
-
-    printf("Nhap vao chuoi: ");
-    gets(str);
+    int i,n;
+    int lower,upper;
+    lower=upper=0;
+    printf("\nDo dai cua chuoi n=");
+    scanf("%d",&n);
+    char str[n];
+    do{
+        printf("\nNhap vao chuoi: ");
+        fflush(stdin);
+        gets(str);
+        if(strlen(str)>n){
+            printf("\nchuoi phai NHO HON hoac BANG n\n",n);
+        }
+    }while(strlen(str)>n);
 
     for(i=0;str[i]!=NULL;i++){
 
         if(str[i]>='A' && str[i]<='Z')
-            chuhoa++;
+            upper++;
         else if(str[i]>='a' && str[i]<='z')
-            chuthuong++;
+            lower++;
     }
-
-    printf("Tat ca so ky tu in hoa la: %d",chuhoa);
-    printf("\nTat ca so ky tu in thuong la: %d",chuthuong);
+    printf("Tat ca so ky tu in hoa la: %d",upper);
+    printf("\nTat ca so ky tu in thuong la: %d",lower);
     getch();
-    return 0;
-
 }
-
