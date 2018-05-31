@@ -4,10 +4,10 @@ int main() {
 
     int n, a, b, c, temp;
 
+
+do{
     printf("Nhap so nguyen n co 3 chu so: ");
     scanf("%d", &n);
-do{
-
     a = n/100;
     b = ((n%100)/10);
     c = n%10;
@@ -29,12 +29,12 @@ do{
             temp=a; a=b; b=temp;
 
                 }
-    printf("So ban dau = %d \n",n);
-    printf("So moi = %d%d%d", a, b, c);
-    getch();
+
 
   }
-while(n>=100 && n<=999);
-
+while(n<=100 || n>=999);
+    printf("So ban dau = %d \n",n);
+    printf("So moi da sap xep= %d%d%d", a, b, c);
+    getch();
 
 }
